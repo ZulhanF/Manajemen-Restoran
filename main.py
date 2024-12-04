@@ -2,13 +2,12 @@ import customtkinter as ctk
 from pymongo import MongoClient
 from tkinter import messagebox
 
-# Konfigurasi MongoDB
+
 MONGO_URI = "mongodb://localhost:27017/"
 DB_NAME = "Restoran"
 COLLECTION_NAME = "Admin"
 
 
-# Fungsi verifikasi login
 def verify_login():
     username = username_entry.get()
     password = password_entry.get()
@@ -35,62 +34,86 @@ def verify_login():
 
 
 # Konfigurasi tampilan CustomTkinter
-ctk.set_appearance_mode("Light")  # Tema: Light, Dark, System
+ctk.set_appearance_mode("Light")
 app = ctk.CTk()
 app.geometry("500x400")
 app.title("Login Page")
-# Tambahkan frame utama di aplikasi untuk menggantikan langsung background
+
 root_frame = ctk.CTkFrame(
     app, fg_color=("#FF6969")
-)  # Gunakan warna latar belakang yang diinginkan
+)
 root_frame.pack(fill="both", expand=True)
 
-# Pindahkan main_frame ke dalam root_frame
-main_frame = ctk.CTkFrame(root_frame, fg_color="#FFF5E0", bg_color=("#FF6969"), border_width=5, border_color="#C80036", corner_radius=15)
+
+main_frame = ctk.CTkFrame(
+    root_frame,
+    fg_color="#FFF5E0",
+    bg_color=("#FF6969"),
+    border_width=5,
+    border_color="#C80036",
+    corner_radius=15,
+)
 main_frame.pack(fill="both", expand=True, padx=25, pady=25)
 
 # Label judul di atas
 title_label = ctk.CTkLabel(
     main_frame,
-    text="Login Page",
-    font=ctk.CTkFont(size=24, weight="bold", family="Poppins"),
+    text="Selamat Datang!",
+    font=ctk.CTkFont(size=24, family="JetBrains Mono"),
 )
-title_label.grid(row=0, column=0, padx=20, pady=10, sticky="w")
+title_label.grid(row=0, column=0, padx=20, pady=15, sticky="w")
 
 # Label dan input username
-username_label = ctk.CTkLabel(main_frame, text="Username:", font=ctk.CTkFont(size=14))
-username_label.grid(row=1, column=0, padx=20, pady=5, sticky="w")
-username_entry = ctk.CTkEntry(
-    main_frame, placeholder_text="Masukkan username", width=300
+username_label = ctk.CTkLabel(
+    main_frame, text="Username:", font=ctk.CTkFont(size=14, family="JetBrains Mono")
 )
-username_entry.grid(row=2, column=0, padx=20, pady=5, sticky="w")
+username_label.grid(row=1, column=0, padx=30, pady=5, sticky="w")
+username_entry = ctk.CTkEntry(
+    main_frame,
+    placeholder_text="Masukkan username",
+    width=300,
+    border_width=2,
+    border_color="#C80036",
+    fg_color="#FFFFFF",
+    font=ctk.CTkFont(size=13,family="Cascadia Mono")
+)
+username_entry.grid(row=2, column=0, padx=30, pady=0, sticky="w")
 
 # Label dan input password
-password_label = ctk.CTkLabel(main_frame, text="Password:", font=ctk.CTkFont(size=14))
-password_label.grid(row=3, column=0, padx=20, pady=5, sticky="w")
-password_entry = ctk.CTkEntry(
-    main_frame, placeholder_text="Masukkan password", show="*", width=300
+password_label = ctk.CTkLabel(
+    main_frame, text="Password:", font=ctk.CTkFont(size=14, family="JetBrains Mono")
 )
-password_entry.grid(row=4, column=0, padx=20, pady=5, sticky="w")
+password_label.grid(row=3, column=0, padx=30, pady=5, sticky="w")
+password_entry = ctk.CTkEntry(
+    main_frame,
+    placeholder_text="Masukkan password",
+    show="*",
+    width=300,
+    border_width=2,
+    border_color="#C80036",
+    fg_color="#FFFFFF",
+    font=ctk.CTkFont(size=13,family="Cascadia Mono")
+)
+password_entry.grid(row=4, column=0, padx=30, pady=0, sticky="w")
 
 # Tombol login
 login_button = ctk.CTkButton(
     main_frame,
     text="Login",
     command=verify_login,
-    font=ctk.CTkFont(size=12, weight="bold", family="Poppins"),
-    text_color="white",
+    font=ctk.CTkFont(size=14, weight="bold", family="Poppins", underline="true" ),
+    text_color="#FFF5E0",
     hover=True,
-    hover_color="#81b867",
+    hover_color="#d94e4e",
     height=40,
-    width=120,
-    border_width=2,
-    corner_radius=5,
-    border_color="#608a4d",
-    bg_color="#262626",
-    fg_color="#79ae61",
-)  # Warna kuning keemasan
-login_button.grid(row=5, column=0, padx=10, pady=20, sticky="w")
+    width=100,
+    border_width=3,
+    corner_radius=10,
+    border_color="#C80036",
+    bg_color="#FFF5E0",
+    fg_color="#FF6969",
+)
+login_button.grid(row=5, column=0, padx=30, pady=20, sticky="w")
 
 # Menjalankan aplikasi
 app.mainloop()
