@@ -1,0 +1,108 @@
+[
+    {
+      "NO_PESANAN": "P001",
+      "ID_RESERVASI": "R001",
+      "TANGGAL": "2024-11-01",
+      "WAKTU": "19:00:00",
+      "NAMA_PELANGGAN": "Rima Puteri",
+      "DAFTAR_MENU": [
+        {
+          "ID_MENU": "MM001",
+          "MENU": "Grilled Salmon with Lemon Butter Sauce",
+          "JUMLAH": 2,
+          "ID_KOKI": "K002"
+        },
+        {
+          "ID_MENU": "MM006",
+          "MENU": "Classic Tiramisu",
+          "JUMLAH": 1,
+          "ID_KOKI": "K004"
+        }
+      ]
+    },
+    {
+      "NO_PESANAN": "P002",
+      "ID_RESERVASI": "R002",
+      "TANGGAL": "2024-11-02",
+      "WAKTU": "20:30:00",
+      "NAMA_PELANGGAN": "Agung Saputra",
+      "DAFTAR_MENU": [
+        {
+          "ID_MENU": "MM016",
+          "MENU": "BBQ Ribs with Coleslaw",
+          "JUMLAH": 1,
+          "ID_KOKI": "K005"
+        },
+        {
+          "ID_MENU": "MM018",
+          "MENU": "Macarons (6 pcs)",
+          "JUMLAH": 2,
+          "ID_KOKI": "K004"
+        }
+      ]
+    },
+    {
+      "NO_PESANAN": "P003",
+      "ID_RESERVASI": "R003",
+      "TANGGAL": "2024-11-03",
+      "WAKTU": "18:00:00",
+      "NAMA_PELANGGAN": "Dina Wijaya",
+      "DAFTAR_MENU": [
+        {
+          "ID_MENU": "MM003",
+          "MENU": "Chicken Alfredo Pasta",
+          "JUMLAH": 1,
+          "ID_KOKI": "K002"
+        },
+        {
+          "ID_MENU": "MM019",
+          "MENU": "Fruit Salad with Yogurt Dressing",
+          "JUMLAH": 3,
+          "ID_KOKI": "K004"
+        }
+      ]
+    },
+    {
+      "NO_PESANAN": "P004",
+      "ID_RESERVASI": "R004",
+      "TANGGAL": "2024-11-04",
+      "WAKTU": "19:30:00",
+      "NAMA_PELANGGAN": "Toni Prasetyo",
+      "DAFTAR_MENU": [
+        {
+          "ID_MENU": "MM017",
+          "MENU": "Seafood Paella",
+          "JUMLAH": 2,
+          "ID_KOKI": "K002"
+        },
+        {
+          "ID_MENU": "MM020",
+          "MENU": "Hot Chocolate with Marshmallows",
+          "JUMLAH": 1,
+          "ID_KOKI": "K001"
+        }
+      ]
+    },
+    {
+      "NO_PESANAN": "P005",
+      "ID_RESERVASI": "R005",
+      "TANGGAL": "2024-11-05",
+      "WAKTU": "20:00:00",
+      "NAMA_PELANGGAN": "Sari Wulandari",
+      "DAFTAR_MENU": [
+        {
+          "ID_MENU": "MM005",
+          "MENU": "Teriyaki Chicken Rice Bowl",
+          "JUMLAH": 3,
+          "ID_KOKI": "K002"
+        },
+        {
+          "ID_MENU": "MM007",
+          "MENU": "Chocolate Lava Cake",
+          "JUMLAH": 2,
+          "ID_KOKI": "K004"
+        }
+      ]
+    }
+  ]
+  

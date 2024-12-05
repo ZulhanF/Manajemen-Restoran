@@ -1,0 +1,123 @@
+[
+    {
+      "ID_PELANGGAN": "P001",
+      "NAMA": "Rima Puteri",
+      "EMAIL": "rima.puteri@yahoo.com",
+      "NO_TELEPON": "0812345678"
+    },
+    {
+      "ID_PELANGGAN": "P002",
+      "NAMA": "Agung Saputra",
+      "EMAIL": "agung.saputra@yahoo.com",
+      "NO_TELEPON": "0987654321"
+    },
+    {
+      "ID_PELANGGAN": "P003",
+      "NAMA": "Dina Wijaya",
+      "EMAIL": "dina.wijaya@yahoo.com",
+      "NO_TELEPON": "0812548765"
+    },
+    {
+      "ID_PELANGGAN": "P004",
+      "NAMA": "Toni Prasetyo",
+      "EMAIL": "toni.prasetyo@yahoo.com",
+      "NO_TELEPON": "0823456789"
+    },
+    {
+      "ID_PELANGGAN": "P005",
+      "NAMA": "Sari Wulandari",
+      "EMAIL": "sari.wulandari@yahoo.com",
+      "NO_TELEPON": "0833456789"
+    },
+    {
+      "ID_PELANGGAN": "P006",
+      "NAMA": "Rendi Setiawan",
+      "EMAIL": "rendi.setiawan@gmail.com",
+      "NO_TELEPON": "0843456789"
+    },
+    {
+      "ID_PELANGGAN": "P007",
+      "NAMA": "Ika Fitriana",
+      "EMAIL": "ika.fitriana@gmail.com",
+      "NO_TELEPON": "0853456789"
+    },
+    {
+      "ID_PELANGGAN": "P008",
+      "NAMA": "Galih Ardiansyah",
+      "EMAIL": "galih.ardiansyah@gmail.com",
+      "NO_TELEPON": "0863456789"
+    },
+    {
+      "ID_PELANGGAN": "P009",
+      "NAMA": "Lisa Marlina",
+      "EMAIL": "lisa.marlina@gmail.com",
+      "NO_TELEPON": "0873456789"
+    },
+    {
+      "ID_PELANGGAN": "P010",
+      "NAMA": "Yudi Gunawan",
+      "EMAIL": "yudi.gunawan@outlook.com",
+      "NO_TELEPON": "0883456789"
+    },
+    {
+      "ID_PELANGGAN": "P011",
+      "NAMA": "Rizky Ramadhan",
+      "EMAIL": "rizky.ramadhan@outlook.com",
+      "NO_TELEPON": "0893456789"
+    },
+    {
+      "ID_PELANGGAN": "P012",
+      "NAMA": "Fahmi Hidayat",
+      "EMAIL": "fahmi.hidayat@outlook.com",
+      "NO_TELEPON": "0811345678"
+    },
+    {
+      "ID_PELANGGAN": "P013",
+      "NAMA": "Rina Astuti",
+      "EMAIL": "rina.astuti@yahoo.com",
+      "NO_TELEPON": "0812341234"
+    },
+    {
+      "ID_PELANGGAN": "P014",
+      "NAMA": "Yusuf Mahardika",
+      "EMAIL": "yusuf.mahardika@yahoo.com",
+      "NO_TELEPON": "0812456789"
+    },
+    {
+      "ID_PELANGGAN": "P015",
+      "NAMA": "Ayu Lestari",
+      "EMAIL": "ayu.lestari@gmail.com",
+      "NO_TELEPON": "0812567890"
+    },
+    {
+      "ID_PELANGGAN": "P016",
+      "NAMA": "Dedi Purnama",
+      "EMAIL": "dedi.purnama@gmail.com",
+      "NO_TELEPON": "0812678901"
+    },
+    {
+      "ID_PELANGGAN": "P017",
+      "NAMA": "Siska Dewi",
+      "EMAIL": "siska.dewi@gmail.com",
+      "NO_TELEPON": "0812789012"
+    },
+    {
+      "ID_PELANGGAN": "P018",
+      "NAMA": "Fajar Ramli",
+      "EMAIL": "fajar.ramli@gmail.com",
+      "NO_TELEPON": "0812890123"
+    },
+    {
+      "ID_PELANGGAN": "P019",
+      "NAMA": "Indah Sari",
+      "EMAIL": "indah.sari@outlook.com",
+      "NO_TELEPON": "0812901234"
+    },
+    {
+      "ID_PELANGGAN": "P020",
+      "NAMA": "Rahmat Hidayat",
+      "EMAIL": "rahmat.hidayat@outlook.com",
+      "NO_TELEPON": "0813012345"
+    }
+  ]
+  

@@ -1,0 +1,33 @@
+[
+    {
+      "ID_KOKI": "K001",
+      "NAMA": "Eka Pratama",
+      "NO_TELEPON": "0812345678",
+      "SPESIALISASI": "Masakan Tradisional"
+    },
+    {
+      "ID_KOKI": "K002",
+      "NAMA": "Wati Sulistyo",
+      "NO_TELEPON": "0987654321",
+      "SPESIALISASI": "Masakan Internasional"
+    },
+    {
+      "ID_KOKI": "K003",
+      "NAMA": "Joko Santoso",
+      "NO_TELEPON": "0812548765",
+      "SPESIALISASI": "Masakan Fusion"
+    },
+    {
+      "ID_KOKI": "K004",
+      "NAMA": "Siti Nurhayati",
+      "NO_TELEPON": "0813778899",
+      "SPESIALISASI": "Dessert dan Patisserie"
+    },
+    {
+      "ID_KOKI": "K005",
+      "NAMA": "Bambang Priyono",
+      "NO_TELEPON": "08561234789",
+      "SPESIALISASI": "BBQ dan Grill"
+    }
+  ]
+  

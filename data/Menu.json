@@ -1,0 +1,123 @@
+[
+    {
+      "ID_MENU": "MM001",
+      "KATEGORI": "Main Course",
+      "NAMA": "Grilled Salmon with Lemon Butter Sauce",
+      "HARGA": 75000
+    },
+    {
+      "ID_MENU": "MM002",
+      "KATEGORI": "Main Course",
+      "NAMA": "Beef Steak with Mushroom Sauce",
+      "HARGA": 85000
+    },
+    {
+      "ID_MENU": "MM003",
+      "KATEGORI": "Main Course",
+      "NAMA": "Chicken Alfredo Pasta",
+      "HARGA": 65000
+    },
+    {
+      "ID_MENU": "MM004",
+      "KATEGORI": "Main Course",
+      "NAMA": "Vegetarian Pizza",
+      "HARGA": 60000
+    },
+    {
+      "ID_MENU": "MM005",
+      "KATEGORI": "Main Course",
+      "NAMA": "Teriyaki Chicken Rice Bowl",
+      "HARGA": 50000
+    },
+    {
+      "ID_MENU": "MM006",
+      "KATEGORI": "Dessert",
+      "NAMA": "Classic Tiramisu",
+      "HARGA": 40000
+    },
+    {
+      "ID_MENU": "MM007",
+      "KATEGORI": "Dessert",
+      "NAMA": "Chocolate Lava Cake",
+      "HARGA": 45000
+    },
+    {
+      "ID_MENU": "MM008",
+      "KATEGORI": "Dessert",
+      "NAMA": "Mixed Berry Cheesecake",
+      "HARGA": 42000
+    },
+    {
+      "ID_MENU": "MM009",
+      "KATEGORI": "Dessert",
+      "NAMA": "Creme Brulee",
+      "HARGA": 40000
+    },
+    {
+      "ID_MENU": "MM010",
+      "KATEGORI": "Dessert",
+      "NAMA": "Panna Cotta with Raspberry Sauce",
+      "HARGA": 38000
+    },
+    {
+      "ID_MENU": "MM011",
+      "KATEGORI": "Beverage",
+      "NAMA": "Freshly Brewed Coffee",
+      "HARGA": 25000
+    },
+    {
+      "ID_MENU": "MM012",
+      "KATEGORI": "Beverage",
+      "NAMA": "Iced Matcha Latte",
+      "HARGA": 30000
+    },
+    {
+      "ID_MENU": "MM013",
+      "KATEGORI": "Beverage",
+      "NAMA": "Strawberry Smoothie",
+      "HARGA": 32000
+    },
+    {
+      "ID_MENU": "MM014",
+      "KATEGORI": "Beverage",
+      "NAMA": "Mango Coconut Mocktail",
+      "HARGA": 35000
+    },
+    {
+      "ID_MENU": "MM015",
+      "KATEGORI": "Beverage",
+      "NAMA": "Classic Lemon Iced Tea",
+      "HARGA": 20000
+    },
+    {
+      "ID_MENU": "MM016",
+      "KATEGORI": "Main Course",
+      "NAMA": "BBQ Ribs with Coleslaw",
+      "HARGA": 90000
+    },
+    {
+      "ID_MENU": "MM017",
+      "KATEGORI": "Main Course",
+      "NAMA": "Seafood Paella",
+      "HARGA": 95000
+    },
+    {
+      "ID_MENU": "MM018",
+      "KATEGORI": "Dessert",
+      "NAMA": "Macarons (6 pcs)",
+      "HARGA": 30000
+    },
+    {
+      "ID_MENU": "MM019",
+      "KATEGORI": "Dessert",
+      "NAMA": "Fruit Salad with Yogurt Dressing",
+      "HARGA": 28000
+    },
+    {
+      "ID_MENU": "MM020",
+      "KATEGORI": "Beverage",
+      "NAMA": "Hot Chocolate with Marshmallows",
+      "HARGA": 27000
+    }
+  ]
+  

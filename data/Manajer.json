@@ -1,0 +1,26 @@
+[
+    {
+      "ID_MANAJER": "M001",
+      "NAMA": "Andi Pratama",
+      "EMAIL": "andi.pratama@gmail.com",
+      "NO_TELEPON": "0812345678",
+      "username": "andipp",
+      "password": "123"
+    },
+    {
+      "ID_MANAJER": "M002",
+      "NAMA": "Siti Rahmawati",
+      "EMAIL": "siti.rahmawati@yahoo.com",
+      "NO_TELEPON": "0987654321",
+      "username": "sitirr",
+      "password": "123"
+    },
+    {
+      "ID_MANAJER": "M003",
+      "NAMA": "Budi Santoso",
+      "EMAIL": "budi.santoso@gmail.com",
+      "NO_TELEPON": "0812548765",
+      "username": "budiss",
+      "password": "123"
+    }
+]

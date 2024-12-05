@@ -36,7 +36,7 @@ def verify_login():
 # Konfigurasi tampilan CustomTkinter
 ctk.set_appearance_mode("Light")
 app = ctk.CTk()
-app.geometry("500x400")
+app.geometry("430x370")
 app.title("Login Page")
 
 root_frame = ctk.CTkFrame(
@@ -48,7 +48,7 @@ root_frame.pack(fill="both", expand=True)
 main_frame = ctk.CTkFrame(
     root_frame,
     fg_color="#FFF5E0",
-    bg_color=("#FF6969"),
+    bg_color="#FF6969",
     border_width=5,
     border_color="#C80036",
     corner_radius=15,
@@ -77,7 +77,7 @@ username_entry = ctk.CTkEntry(
     fg_color="#FFFFFF",
     font=ctk.CTkFont(size=13,family="Cascadia Mono")
 )
-username_entry.grid(row=2, column=0, padx=30, pady=0, sticky="w")
+username_entry.grid(row=2, column=0, padx=30, pady=0, sticky="ew")
 
 # Label dan input password
 password_label = ctk.CTkLabel(
@@ -110,7 +110,7 @@ login_button = ctk.CTkButton(
     border_width=3,
     corner_radius=10,
     border_color="#C80036",
-    bg_color="#FFF5E0",
+    bg_color="transparent",
     fg_color="#FF6969",
 )
 login_button.grid(row=5, column=0, padx=30, pady=20, sticky="w")

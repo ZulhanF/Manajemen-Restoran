@@ -1,0 +1,80 @@
+[
+  {
+    "NOMOR_MEJA": "M001",
+    "KAPASITAS": 2,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja Biasa"
+  },
+  {
+    "NOMOR_MEJA": "M002",
+    "KAPASITAS": 4,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja VIP"
+  },
+  {
+    "NOMOR_MEJA": "M003",
+    "KAPASITAS": 3,
+    "STATUS": "Terisi",
+    "TIPE": "Meja Biasa"
+  },
+  {
+    "NOMOR_MEJA": "M004",
+    "KAPASITAS": 6,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja VIP"
+  },
+  {
+    "NOMOR_MEJA": "M005",
+    "KAPASITAS": 2,
+    "STATUS": "Terisi",
+    "TIPE": "Meja Biasa"
+  },
+  {
+    "NOMOR_MEJA": "M006",
+    "KAPASITAS": 4,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja VIP"
+  },
+  {
+    "NOMOR_MEJA": "M007",
+    "KAPASITAS": 8,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja VIP"
+  },
+  {
+    "NOMOR_MEJA": "M008",
+    "KAPASITAS": 4,
+    "STATUS": "Terisi",
+    "TIPE": "Meja Biasa"
+  },
+  {
+    "NOMOR_MEJA": "M009",
+    "KAPASITAS": 2,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja Biasa"
+  },
+  {
+    "NOMOR_MEJA": "M010",
+    "KAPASITAS": 3,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja Biasa"
+  },
+  {
+    "NOMOR_MEJA": "M011",
+    "KAPASITAS": 5,
+    "STATUS": "Terisi",
+    "TIPE": "Meja VIP"
+  },
+  {
+    "NOMOR_MEJA": "M012",
+    "KAPASITAS": 6,
+    "STATUS": "Tersedia",
+    "TIPE": "Meja VIP"
+  },
+  {
+    "NOMOR_MEJA": "M013",
+    "KAPASITAS": 2,
+    "STATUS": "Terisi",
+    "TIPE": "Meja Biasa"
+  }
+]

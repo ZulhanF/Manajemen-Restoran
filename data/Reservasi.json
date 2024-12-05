@@ -1,0 +1,163 @@
+[
+    {
+      "ID_RESERVASI": "R001",
+      "ID_PELANGGAN": "P001",
+      "NAMA_PELANGGAN": "Rima Puteri",
+      "ID_MEJA": "M001",
+      "TANGGAL": "2024-11-01",
+      "WAKTU": "19:00:00"
+    },
+    {
+      "ID_RESERVASI": "R002",
+      "ID_PELANGGAN": "P002",
+      "NAMA_PELANGGAN": "Agung Saputra",
+      "ID_MEJA": "M002",
+      "TANGGAL": "2024-11-02",
+      "WAKTU": "20:30:00"
+    },
+    {
+      "ID_RESERVASI": "R003",
+      "ID_PELANGGAN": "P003",
+      "NAMA_PELANGGAN": "Dina Wijaya",
+      "ID_MEJA": "M003",
+      "TANGGAL": "2024-11-03",
+      "WAKTU": "18:00:00"
+    },
+    {
+      "ID_RESERVASI": "R004",
+      "ID_PELANGGAN": "P004",
+      "NAMA_PELANGGAN": "Toni Prasetyo",
+      "ID_MEJA": "M004",
+      "TANGGAL": "2024-11-04",
+      "WAKTU": "19:30:00"
+    },
+    {
+      "ID_RESERVASI": "R005",
+      "ID_PELANGGAN": "P005",
+      "NAMA_PELANGGAN": "Sari Wulandari",
+      "ID_MEJA": "M005",
+      "TANGGAL": "2024-11-05",
+      "WAKTU": "20:00:00"
+    },
+    {
+      "ID_RESERVASI": "R006",
+      "ID_PELANGGAN": "P006",
+      "NAMA_PELANGGAN": "Rendi Setiawan",
+      "ID_MEJA": "M006",
+      "TANGGAL": "2024-11-06",
+      "WAKTU": "18:30:00"
+    },
+    {
+      "ID_RESERVASI": "R007",
+      "ID_PELANGGAN": "P007",
+      "NAMA_PELANGGAN": "Ika Fitriana",
+      "ID_MEJA": "M007",
+      "TANGGAL": "2024-11-07",
+      "WAKTU": "19:00:00"
+    },
+    {
+      "ID_RESERVASI": "R008",
+      "ID_PELANGGAN": "P008",
+      "NAMA_PELANGGAN": "Galih Ardiansyah",
+      "ID_MEJA": "M008",
+      "TANGGAL": "2024-11-08",
+      "WAKTU": "20:15:00"
+    },
+    {
+      "ID_RESERVASI": "R009",
+      "ID_PELANGGAN": "P009",
+      "NAMA_PELANGGAN": "Lisa Marlina",
+      "ID_MEJA": "M009",
+      "TANGGAL": "2024-11-09",
+      "WAKTU": "19:45:00"
+    },
+    {
+      "ID_RESERVASI": "R010",
+      "ID_PELANGGAN": "P010",
+      "NAMA_PELANGGAN": "Yudi Gunawan",
+      "ID_MEJA": "M010",
+      "TANGGAL": "2024-11-10",
+      "WAKTU": "18:15:00"
+    },
+    {
+      "ID_RESERVASI": "R011",
+      "ID_PELANGGAN": "P011",
+      "NAMA_PELANGGAN": "Rizky Ramadhan",
+      "ID_MEJA": "M011",
+      "TANGGAL": "2024-11-11",
+      "WAKTU": "19:30:00"
+    },
+    {
+      "ID_RESERVASI": "R012",
+      "ID_PELANGGAN": "P012",
+      "NAMA_PELANGGAN": "Fahmi Hidayat",
+      "ID_MEJA": "M012",
+      "TANGGAL": "2024-11-12",
+      "WAKTU": "20:00:00"
+    },
+    {
+      "ID_RESERVASI": "R013",
+      "ID_PELANGGAN": "P013",
+      "NAMA_PELANGGAN": "Rina Astuti",
+      "ID_MEJA": "M001",
+      "TANGGAL": "2024-11-13",
+      "WAKTU": "19:00:00"
+    },
+    {
+      "ID_RESERVASI": "R014",
+      "ID_PELANGGAN": "P014",
+      "NAMA_PELANGGAN": "Yusuf Mahardika",
+      "ID_MEJA": "M002",
+      "TANGGAL": "2024-11-14",
+      "WAKTU": "20:45:00"
+    },
+    {
+      "ID_RESERVASI": "R015",
+      "ID_PELANGGAN": "P015",
+      "NAMA_PELANGGAN": "Ayu Lestari",
+      "ID_MEJA": "M003",
+      "TANGGAL": "2024-11-15",
+      "WAKTU": "18:30:00"
+    },
+    {
+      "ID_RESERVASI": "R016",
+      "ID_PELANGGAN": "P016",
+      "NAMA_PELANGGAN": "Dedi Purnama",
+      "ID_MEJA": "M004",
+      "TANGGAL": "2024-11-16",
+      "WAKTU": "19:15:00"
+    },
+    {
+      "ID_RESERVASI": "R017",
+      "ID_PELANGGAN": "P017",
+      "NAMA_PELANGGAN": "Siska Dewi",
+      "ID_MEJA": "M005",
+      "TANGGAL": "2024-11-17",
+      "WAKTU": "20:30:00"
+    },
+    {
+      "ID_RESERVASI": "R018",
+      "ID_PELANGGAN": "P018",
+      "NAMA_PELANGGAN": "Fajar Ramli",
+      "ID_MEJA": "M006",
+      "TANGGAL": "2024-11-18",
+      "WAKTU": "18:45:00"
+    },
+    {
+      "ID_RESERVASI": "R019",
+      "ID_PELANGGAN": "P019",
+      "NAMA_PELANGGAN": "Indah Sari",
+      "ID_MEJA": "M007",
+      "TANGGAL": "2024-11-19",
+      "WAKTU": "19:30:00"
+    },
+    {
+      "ID_RESERVASI": "R020",
+      "ID_PELANGGAN": "P020",
+      "NAMA_PELANGGAN": "Rahmat Hidayat",
+      "ID_MEJA": "M008",
+      "TANGGAL": "2024-11-20",
+      "WAKTU": "20:00:00"
+    }
+  ]
+  

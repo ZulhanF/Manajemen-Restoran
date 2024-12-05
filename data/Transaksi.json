@@ -1,0 +1,38 @@
+[
+    {
+      "ID_RESERVASI": "R001",
+      "TOTAL_HARGA": 110000,
+      "METODE_PEMBAYARAN": "Bank Transfer",
+      "STATUS": "Selesai",
+      "NO_TRANSAKSI": "T001"
+    },
+    {
+      "ID_RESERVASI": "R002",
+      "TOTAL_HARGA": 140000,
+      "METODE_PEMBAYARAN": "Bank Transfer",
+      "STATUS": "Selesai",
+      "NO_TRANSAKSI": "T002"
+    },
+    {
+      "ID_RESERVASI": "R003",
+      "TOTAL_HARGA": 90000,
+      "METODE_PEMBAYARAN": "Credit Card",
+      "STATUS": "Selesai",
+      "NO_TRANSAKSI": "T003"
+    },
+    {
+      "ID_RESERVASI": "R004",
+      "TOTAL_HARGA": 185000,
+      "METODE_PEMBAYARAN": "Credit Card",
+      "STATUS": "Selesai",
+      "NO_TRANSAKSI": "T004"
+    },
+    {
+      "ID_RESERVASI": "R005",
+      "TOTAL_HARGA": 165000,
+      "METODE_PEMBAYARAN": "E-Wallet",
+      "STATUS": "Selesai",
+      "NO_TRANSAKSI": "T005"
+    }
+  ]
+  
