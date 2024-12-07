@@ -312,6 +312,7 @@ class MainUI:
             new_data[key] = value
         inserted_id = collection.insert_one(new_data).inserted_id
         print(f"New document inserted with ID: {inserted_id}")
+        messagebox.showinfo("Succes!",f"Data berhasil ditambahkan")
         self.load_collection_data(None)
 
     def delete_data(self):
@@ -330,6 +331,7 @@ class MainUI:
             return
 
         collection.delete_one({"_id": doc_id})
+        messagebox.showinfo("Succes!",f"Data dengan ID {doc_id} berhasil dihapus")
         self.load_collection_data(None)
 
     def update_data(self):
@@ -349,7 +351,7 @@ class MainUI:
 
         existing_doc = collection.find_one({"_id": doc_id})
         if not existing_doc:
-            messagebox.showerror("Error", f"Document with ID '{doc_id}' not found.")
+            messagebox.showerror("Error", f"Data dengan ID '{doc_id}' tidak ditemukan.")
             return
 
         new_data = {}
@@ -369,6 +371,7 @@ class MainUI:
             new_data[key] = new_value if new_value else value
 
         collection.update_one({"_id": doc_id}, {"$set": new_data})
+        messagebox.showinfo("Succes!",f"Data dengan ID {doc_id} berhasil diperbarui")
         self.load_collection_data(None)
 
     def run(self):
