@@ -124,4 +124,4 @@ def main_ui():
     app = MainUI()
     app.run()
 
-#main_ui()
+main_ui()
