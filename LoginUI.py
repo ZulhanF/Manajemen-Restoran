@@ -1,11 +1,11 @@
 import customtkinter as ctk
 from pymongo import MongoClient
 from tkinter import messagebox
-
+from MainUI import main_ui
 
 MONGO_URI = "mongodb://localhost:27017/"
-DB_NAME = "Restoran"
-COLLECTION_NAME = "Admin"
+DB_NAME = "Reservasi"
+COLLECTION_NAME = "Manajer"
 
 
 def verify_login():
@@ -26,14 +26,15 @@ def verify_login():
 
     if user:
         messagebox.showinfo("Success", "Login berhasil!")
+        app.destroy()
+        main_ui()
     else:
         messagebox.showerror("Error", "Username atau password salah!")
 
-    # Tutup koneksi
     client.close()
 
 
-# Konfigurasi tampilan CustomTkinter
+# Konfigurasi tampilan login 
 ctk.set_appearance_mode("Light")
 app = ctk.CTk()
 app.geometry("430x370")
@@ -117,3 +118,4 @@ login_button.grid(row=5, column=0, padx=30, pady=20, sticky="w")
 
 # Menjalankan aplikasi
 app.mainloop()
+

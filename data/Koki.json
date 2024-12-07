@@ -1,33 +1,38 @@
 [
     {
+      "_id":"K001",
       "ID_KOKI": "K001",
       "NAMA": "Eka Pratama",
       "NO_TELEPON": "0812345678",
-      "SPESIALISASI": "Masakan Tradisional"
+      "SPESIALISASI": "Main Course"
     },
     {
+      "_id":"K002",
       "ID_KOKI": "K002",
       "NAMA": "Wati Sulistyo",
       "NO_TELEPON": "0987654321",
-      "SPESIALISASI": "Masakan Internasional"
+      "SPESIALISASI": "Main Course"
     },
     {
+      "_id":"K003",
       "ID_KOKI": "K003",
       "NAMA": "Joko Santoso",
       "NO_TELEPON": "0812548765",
-      "SPESIALISASI": "Masakan Fusion"
+      "SPESIALISASI": "Dessert"
     },
     {
+      "_id":"K004",
       "ID_KOKI": "K004",
       "NAMA": "Siti Nurhayati",
       "NO_TELEPON": "0813778899",
-      "SPESIALISASI": "Dessert dan Patisserie"
+      "SPESIALISASI": "Dessert"
     },
     {
+      "_id":"K005",
       "ID_KOKI": "K005",
       "NAMA": "Bambang Priyono",
       "NO_TELEPON": "08561234789",
-      "SPESIALISASI": "BBQ dan Grill"
+      "SPESIALISASI": "Beverage"
     }
   ]
   
