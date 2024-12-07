@@ -5,7 +5,7 @@ from tkinter import messagebox, ttk
 
 class MainUI:
     def __init__(self):
-        #Koneksi MongoDB dan setting tampilan GUI
+        # Koneksi MongoDB dan setting tampilan GUI
         self.client = MongoClient("mongodb://localhost:27017/")
         self.db = self.client["Reservasi"]
         ctk.set_appearance_mode("Light")
@@ -26,7 +26,7 @@ class MainUI:
         )
         self.main_frame.pack(fill="both", expand=True, padx=25, pady=25)
 
-        #Inisialisasi Side Frame, Berisi fungsi2 yang bisa dilakukan pengguna
+        # Inisialisasi Side Frame, Berisi fungsi2 yang bisa dilakukan pengguna
         self.side_frame = ctk.CTkFrame(
             self.main_frame,
             width=250,
@@ -75,7 +75,7 @@ class MainUI:
         )
         self.crud_frame.pack(pady=10)
 
-        #Tombol insert
+        # Tombol insert
         self.insert_bt = ctk.CTkButton(
             self.crud_frame,
             text="INSERT",
@@ -92,7 +92,7 @@ class MainUI:
         )
         self.insert_bt.grid(row=0, column=0, padx=5, pady=5)
 
-        #Tombol delete
+        # Tombol delete
         self.delete_bt = ctk.CTkButton(
             self.crud_frame,
             text="DELETE",
@@ -109,7 +109,7 @@ class MainUI:
         )
         self.delete_bt.grid(row=0, column=1, padx=5, pady=5)
 
-        #Tombol update
+        # Tombol update
         self.update_bt = ctk.CTkButton(
             self.crud_frame,
             text="UPDATE",
@@ -135,7 +135,7 @@ class MainUI:
         )
         self.sort_field_label.pack(pady=(10, 5))
 
-        #Dropdown untuk pilih field yang ingin diurutkan
+        # Dropdown untuk pilih field yang ingin diurutkan
         self.sort_field_var = ctk.StringVar(value="")
         self.sort_field_dropdown = ctk.CTkOptionMenu(
             self.side_frame,
@@ -300,30 +300,52 @@ class MainUI:
             value = ctk.CTkInputDialog(
                 title="Insert Data",
                 text=f"Enter value for '{key}':",
+                font=ctk.CTkFont(size=14, family="JetBrains Mono"),
+                button_fg_color="#FF6969",
+                button_hover_color="#C80036",
+                fg_color="#FFF5E0",
+                entry_border_color="#C80036",
+                button_text_color="#0C1844",
             ).get_input()
             if value is None:
                 return
             new_data[key] = value
         inserted_id = collection.insert_one(new_data).inserted_id
         print(f"New document inserted with ID: {inserted_id}")
-        self.display_collection_data(None)
+        self.load_collection_data(None)
 
     def delete_data(self):
         collection = self.db[self.selected_collection.get()]
         doc_id = ctk.CTkInputDialog(
             title="Delete Data",
             text="Enter the ID of the document to delete:",
+            font=ctk.CTkFont(size=14, family="JetBrains Mono"),
+            button_fg_color="#FF6969",
+            button_hover_color="#C80036",
+            fg_color="#FFF5E0",
+            entry_border_color="#C80036",
+            button_text_color="#0C1844",
         ).get_input()
+        if doc_id is None:
+            return
 
         collection.delete_one({"_id": doc_id})
-        self.display_collection_data(None)
+        self.load_collection_data(None)
 
     def update_data(self):
         collection = self.db[self.selected_collection.get()]
         doc_id = ctk.CTkInputDialog(
             title="Update Data",
             text="Enter the ID of the document to update:",
+            font=ctk.CTkFont(size=14, family="JetBrains Mono"),
+            button_fg_color="#FF6969",
+            button_hover_color="#C80036",
+            fg_color="#FFF5E0",
+            entry_border_color="#C80036",
+            button_text_color="#0C1844",
         ).get_input()
+        if doc_id is None:
+            return
 
         existing_doc = collection.find_one({"_id": doc_id})
         if not existing_doc:
@@ -332,19 +354,25 @@ class MainUI:
 
         new_data = {}
         for key, value in existing_doc.items():
-            if key != "_id":
-                new_value = ctk.CTkInputDialog(
-                    title="Update Data",
-                    text=f"Enter new value for '{key}' (current value: {value}):",
-                ).get_input()
-                new_data[key] = new_value if new_value else value
+            new_value = ctk.CTkInputDialog(
+                title="Update Data",
+                text=f"Enter new value for '{key}' (current value: {value}):",
+                font=ctk.CTkFont(size=14, family="JetBrains Mono"),
+                button_fg_color="#FF6969",
+                button_hover_color="#C80036",
+                fg_color="#FFF5E0",
+                entry_border_color="#C80036",
+                button_text_color="#0C1844",
+            ).get_input()
+            if new_value is None:
+                return
+            new_data[key] = new_value if new_value else value
 
         collection.update_one({"_id": doc_id}, {"$set": new_data})
-        self.display_collection_data(None)
+        self.load_collection_data(None)
 
     def run(self):
         self.app.mainloop()
-
 
 def main_ui():
     app = MainUI()
