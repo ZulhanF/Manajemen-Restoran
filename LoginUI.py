@@ -1,11 +1,11 @@
 import customtkinter as ctk
 from pymongo import MongoClient
 from tkinter import messagebox
-from MainUI import main_ui
+from tesMainUI import main_ui
 
 MONGO_URI = "mongodb://localhost:27017/"
-DB_NAME = "Reservasi"
-COLLECTION_NAME = "Manajer"
+DB_NAME = "admin"
+COLLECTION_NAME = "Manager"
 
 
 def verify_login():
