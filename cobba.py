@@ -253,6 +253,7 @@ class MainUI:
             messagebox.showerror("Error", f"Document with ID '{doc_id}' not found.")
             return
 
+
         new_data = {}
         for key, value in existing_doc.items():
             if key != "_id":
