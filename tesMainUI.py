@@ -127,6 +127,7 @@ class MainUI:
         )
         self.update_bt.grid(row=1, column=0, padx=5, pady=5)
         
+        
         # Tombol find
         self.find_bt = ctk.CTkButton(
             self.crud_frame,
