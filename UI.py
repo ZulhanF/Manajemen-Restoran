@@ -245,25 +245,26 @@ class MainUI:
                 size=13, weight="normal", family="JetBrains Mono"
             ),
             font=ctk.CTkFont(size=13, weight="bold", family="JetBrains Mono"),
+            command=self.run_agregation,
         )
         self.agregasi_dropdown.pack(pady=10, padx=20)
 
         # Tombol untuk menjalankan agregasi
-        self.agregasi_button = ctk.CTkButton(
-            self.side_frame,
-            text="Jalankan Agregasi",
-            fg_color="#FFF5E1",
-            bg_color="#FF6969",
-            text_color="#FF6969",
-            border_color="#C80036",
-            border_width=3,
-            hover=True,
-            hover_color="#0C1844",
-            width=70,
-            font=ctk.CTkFont(size=13, weight="bold", family="JetBrains Mono"),
-            command=self.run_agregation,
-        )
-        self.agregasi_button.pack(pady=10)
+        # self.agregasi_button = ctk.CTkButton(
+        #     self.side_frame,
+        #     text="Jalankan Agregasi",
+        #     fg_color="#FFF5E1",
+        #     bg_color="#FF6969",
+        #     text_color="#FF6969",
+        #     border_color="#C80036",
+        #     border_width=3,
+        #     hover=True,
+        #     hover_color="#0C1844",
+        #     width=70,
+        #     font=ctk.CTkFont(size=13, weight="bold", family="JetBrains Mono"),
+        #     command=self.run_agregation,
+        # )
+        # self.agregasi_button.pack(pady=10)
 
             # Main Frame kanan untuk menampilkan data dari koleksi yang dipilih
         self.data_frame = ctk.CTkFrame(
@@ -509,11 +510,11 @@ class MainUI:
         messagebox.showinfo("Succes!",f"Data dengan ID {doc_id} berhasil diperbarui")
         self.load_collection_data(None)
     
-    def run_agregation(self):
+    def run_agregation(self, agregasi_pilihan=None):
         agregasi_pilihan = self.agregasi_var.get()
         
         try:
-            # Clear existing treeview
+            # Kosongkan tabel lama
             for i in self.tree.get_children():
                 self.tree.delete(i)
 
