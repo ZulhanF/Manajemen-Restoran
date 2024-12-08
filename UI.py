@@ -249,7 +249,7 @@ class MainUI:
         )
         self.agregasi_dropdown.pack(pady=10, padx=20)
 
-        # Tombol untuk menjalankan agregasi, sementara dihilangkan
+        # Tombol untuk menjalankan agregasi, sementara dihilangkan.
         # self.agregasi_button = ctk.CTkButton(
         #     self.side_frame,
         #     text="Jalankan Agregasi",
