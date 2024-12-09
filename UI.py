@@ -224,7 +224,7 @@ class MainUI:
 
         # Daftar pilihan agregasi
         self.agregasi_options = [
-            "Pelanggan dengan Pengeluaran Tertinggi", 
+            "Pelanggan Teratas", 
             "Waktu Reservasi Terpopuler", 
             "Menu Terlaris"
         ]
@@ -519,7 +519,7 @@ class MainUI:
                 self.tree.delete(i)
 
             # Pilih koleksi dan jalankan agregasi sesuai pilihan
-            if agregasi_pilihan == "Pelanggan dengan Pengeluaran Tertinggi":
+            if agregasi_pilihan == "Pelanggan Teratas":
                 result = list(self.db.Transaksi.aggregate([
                     {
                         '$lookup': {
@@ -547,18 +547,21 @@ class MainUI:
                         '$group': {
                             '_id': "$pelangganInfo.ID_PELANGGAN",
                             'namaPelanggan': { '$first': "$pelangganInfo.NAMA" },
-                            'totalPengeluaran': { '$sum': "$TOTAL_HARGA" }
+                            'totalPengeluaran': { '$sum': "$TOTAL_HARGA" },
+                            'totalReservasi': { '$sum': 1 }  # Hitung jumlah reservasi per pelanggan
                         }
                     },
                     {
                         '$project': {
                             '_id': 0,
                             'Nama Pelanggan': "$namaPelanggan",
-                            'Total Pengeluaran': "$totalPengeluaran"
+                            'Total Pengeluaran': "$totalPengeluaran",
+                            'Total Reservasi': "$totalReservasi"  # Tampilkan total reservasi
                         }
                     },
-                    { '$sort': { 'Total Pengeluaran': -1 } }
+                    { '$sort': { 'Total Reservasi': -1, 'Total Pengeluaran':-1 } }
                 ]))
+
                 
             elif agregasi_pilihan == "Waktu Reservasi Terpopuler":
                 result = list(self.db.Reservasi.aggregate([
