@@ -1,11 +1,7 @@
 import customtkinter as ctk
 from pymongo import MongoClient
 from tkinter import messagebox
-from tesMainUI import main_ui
-
-MONGO_URI = "mongodb://localhost:27017/"
-DB_NAME = "admin"
-COLLECTION_NAME = "Manager"
+from UI import main_ui
 
 
 def verify_login():
@@ -17,9 +13,9 @@ def verify_login():
         return
 
     # Koneksi ke MongoDB
-    client = MongoClient(MONGO_URI)
-    db = client[DB_NAME]
-    collection = db[COLLECTION_NAME]
+    client = MongoClient("mongodb://localhost:27017/")
+    db = client["admin"]
+    collection = db["Manager"]
 
     # Pencarian username dan password
     user = collection.find_one({"username": username, "password": password})

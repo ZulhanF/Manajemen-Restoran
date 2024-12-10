@@ -144,7 +144,6 @@ class MainUI:
         )
         self.find_bt.grid(row=1, column=1, padx=5, pady=5)
 
-        # Setting fungsi sort di side frame yang sama dengan tombol crud td
         self.sort_field_label = ctk.CTkLabel(
             self.side_frame,
             text="Urutkan Field:",
@@ -153,7 +152,6 @@ class MainUI:
         )
         self.sort_field_label.pack(pady=(10, 5))
 
-        # Dropdown untuk pilih field yang ingin diurutkan
         self.sort_field_var = ctk.StringVar(value="")
         self.sort_field_dropdown = ctk.CTkOptionMenu(
             self.side_frame,
@@ -168,12 +166,11 @@ class MainUI:
                 size=13, weight="normal", family="JetBrains Mono"
             ),
             font=ctk.CTkFont(size=13, weight="bold", family="JetBrains Mono"),
-            values=[],  # akan diisi dinamis
+            values=[],
             variable=self.sort_field_var,
         )
         self.sort_field_dropdown.pack(pady=10, padx=20)
 
-        # Dorpdown pilihan arah urutan
         self.sort_option = ["Ascending", "Descending"]
         self.sort_var = ctk.StringVar(value=self.sort_option[0])
 
@@ -196,7 +193,6 @@ class MainUI:
         )
         self.sort_dropdown.pack(pady=10)
 
-        # Tombol untuk melakukan sorting
         self.sort_button = ctk.CTkButton(
             self.side_frame,
             text="Sorting",
@@ -213,7 +209,6 @@ class MainUI:
         )
         self.sort_button.pack(pady=10)
         
-        #Tombol2 agregasi
         self.agregasi_label = ctk.CTkLabel(
             self.side_frame,
             text="Advanced View:",
@@ -222,7 +217,6 @@ class MainUI:
         )
         self.agregasi_label.pack(pady=(10, 5))
 
-        # Daftar pilihan agregasi
         self.agregasi_options = [
             "Pelanggan Teratas", 
             "Waktu Reservasi Terpopuler", 
@@ -283,7 +277,6 @@ class MainUI:
         self.tree = ttk.Treeview(self.tree_scroll)
         self.tree.pack(fill="both", expand=True)
 
-        # Setting tema treeview atau tabelnya
         style = ttk.Style()
         style.configure(
             "Treeview",
@@ -305,10 +298,9 @@ class MainUI:
             background=[("selected", "#C80036")],
         )
 
-        # Tampilkan koleksi
         if collections and collections[0] != "Tidak ada koleksi":
             self.load_collection_data(collections[0])
-    # Fungsi menampilkan data di main frame
+
     def load_collection_data(self, collection_name=None, sort_order="Ascending"):
         for i in self.tree.get_children():
             self.tree.delete(i)
@@ -321,7 +313,6 @@ class MainUI:
                 columns = list(documents[0].keys())
                 columns = [col for col in columns if col != "_id"]
 
-                # Update dropdown field sorting
                 self.sort_field_dropdown.configure(values=columns)
                 if not self.sort_field_var.get():
                     self.sort_field_var.set(columns[0])  # Set default field
@@ -332,7 +323,6 @@ class MainUI:
                     self.tree.heading(col, text=col.title(), anchor="center")
                     self.tree.column(col, anchor="center", width=150)
 
-            # Sorting logic
             sort_field = self.sort_field_var.get()
             sort_order = self.sort_var.get()
 
@@ -343,7 +333,6 @@ class MainUI:
                         reverse=(sort_order == "Descending"),
                     )
                 except TypeError:
-                    # Jika terjadi error sorting (misal tipe data campuran)
                     documents.sort(
                         key=lambda x: str(x.get(sort_field, "")),
                         reverse=(sort_order == "Descending"),
@@ -369,7 +358,6 @@ class MainUI:
         collection_name = self.selected_collection.get()
         collection = self.db[collection_name]
         
-        # Input dialog for search term
         search_term = ctk.CTkInputDialog(
             title="Cari Data",
             text="Masukkan nilai yang ingin dicari(Akan dicari di semua field koleksi ini😋) :",
@@ -385,17 +373,14 @@ class MainUI:
             return
 
         try:
-            # Clear existing treeview
             for i in self.tree.get_children():
                 self.tree.delete(i)
 
-            # Get the first document to determine fields
             sample_doc = collection.find_one()
             if not sample_doc:
                 messagebox.showinfo("Info", "Koleksi Kosong")
                 return
 
-            # Prepare columns
             columns = list(sample_doc.keys())
             columns = [col for col in columns if col != "_id"]
             
@@ -405,7 +390,6 @@ class MainUI:
                 self.tree.heading(col, text=col.title(), anchor="center")
                 self.tree.column(col, anchor="center", width=150)
 
-            # Create a query that matches the search term across all fields
             query = {
                 "$or": [
                     {col: {"$regex": search_term, "$options": "i"}} 
@@ -413,10 +397,8 @@ class MainUI:
                 ]
             }
 
-            # Find matching documents
             matching_docs = list(collection.find(query))
 
-            # Populate treeview
             if matching_docs:
                 for doc in matching_docs:
                     row_data = [str(doc.get(col, "")) for col in columns]
@@ -514,11 +496,10 @@ class MainUI:
         agregasi_pilihan = self.agregasi_var.get()
         
         try:
-            # Kosongkan tabel lama
+
             for i in self.tree.get_children():
                 self.tree.delete(i)
 
-            # Pilih koleksi dan jalankan agregasi sesuai pilihan
             if agregasi_pilihan == "Pelanggan Teratas":
                 result = list(self.db.Transaksi.aggregate([
                     {
@@ -548,7 +529,7 @@ class MainUI:
                             '_id': "$pelangganInfo.ID_PELANGGAN",
                             'namaPelanggan': { '$first': "$pelangganInfo.NAMA" },
                             'totalPengeluaran': { '$sum': "$TOTAL_HARGA" },
-                            'totalReservasi': { '$sum': 1 }  # Hitung jumlah reservasi per pelanggan
+                            'totalReservasi': { '$sum': 1 }
                         }
                     },
                     {
@@ -556,7 +537,7 @@ class MainUI:
                             '_id': 0,
                             'Nama Pelanggan': "$namaPelanggan",
                             'Total Pengeluaran': "$totalPengeluaran",
-                            'Total Reservasi': "$totalReservasi"  # Tampilkan total reservasi
+                            'Total Reservasi': "$totalReservasi"
                         }
                     },
                     { '$sort': { 'Total Reservasi': -1, 'Total Pengeluaran':-1 } }
@@ -585,48 +566,34 @@ class MainUI:
                 result = list(self.db.DetailPesanan.aggregate([
                     {
                         '$group': {
-                            '_id': "$ID_MENU", 
-                            'totalPesanan': { '$sum': "$JUMLAH" }
+                        '_id': { 'ID_MENU': "$ID_MENU", 'Nama_Menu': "$NAMA_MENU", 'Kategori': "$KATEGORI_MENU" },
+                        'TotalPesanan': { '$sum': "$JUMLAH" }
                         }
-                    },
-                    {
-                        '$lookup': {
-                            'from': "Menu",
-                            'localField': "_id",
-                            'foreignField': "ID_MENU",
-                            'as': "menuInfo"
-                        }
-                    },
-                    {
-                        '$unwind': "$menuInfo"
                     },
                     {
                         '$project': {
-                            '_id': 0,
-                            'Nama Menu': "$menuInfo.NAMA",
-                            'Kategori': "$menuInfo.KATEGORI",
-                            'Total Pesanan': "$totalPesanan"
+                        '_id': 0,
+                        "ID Menu": "$_id.ID_MENU",
+                        "Nama Menu": "$_id.Nama_Menu",
+                        "Kategori": "$_id.Kategori",
+                        "Total Pesanan": "$TotalPesanan"
                         }
                     },
-                    { '$sort': { 'Total Pesanan': -1 } }
-                ]))
+                    { '$sort': { "Total Pesanan": -1 } }
+                    ]))
             
-            # Jika result kosong
             if not result:
                 messagebox.showinfo("Informasi", "Tidak ada data yang ditemukan")
                 return
 
-            # Tentukan kolom dari result pertama
             columns = list(result[0].keys())
             
-            # Konfigurasi Treeview
             self.tree["columns"] = columns
             self.tree["show"] = "headings"
             for col in columns:
                 self.tree.heading(col, text=col, anchor="center")
                 self.tree.column(col, anchor="center", width=200)
 
-            # Masukkan data ke Treeview
             for doc in result:
                 row_data = [str(doc.get(col, "")) for col in columns]
                 self.tree.insert("", "end", values=row_data)
@@ -643,4 +610,4 @@ def main_ui():
     app = MainUI()
     app.run()
 
-main_ui()
+#main_ui()
