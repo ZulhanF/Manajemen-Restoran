@@ -5,7 +5,6 @@ from tkinter import messagebox, ttk
 
 class MainUI:
     def __init__(self):
-        # Koneksi MongoDB dan setting tampilan GUI
         self.client = MongoClient("mongodb://localhost:27017/")
         self.db = self.client["Reservasi"]
         ctk.set_appearance_mode("Light")
@@ -27,7 +26,6 @@ class MainUI:
         )
         self.main_frame.pack(fill="both", expand=True, padx=25, pady=25)
 
-        # Inisialisasi Side Frame, Berisi fungsi2 yang bisa dilakukan pengguna
         self.side_frame = ctk.CTkFrame(
             self.main_frame,
             width=250,
@@ -46,10 +44,8 @@ class MainUI:
         )
         self.collections_label.pack(pady=(10, 5))
 
-        # Ambil List Koleksi
         collections = list(self.db.list_collection_names())
 
-        # Pemilihan Koleksi dengan Dropdown
         self.selected_collection = ctk.StringVar(value=collections[0])
         self.collections_dropdown = ctk.CTkOptionMenu(
             self.side_frame,
@@ -70,7 +66,6 @@ class MainUI:
         )
         self.collections_dropdown.pack(pady=10, padx=20)
 
-        # Setting frame tombol2 untuk mengakses fungsi
         self.crud_frame = ctk.CTkFrame(
             self.side_frame, fg_color="transparent", width=169
         )
